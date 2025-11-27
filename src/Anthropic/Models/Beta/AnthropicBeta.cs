@@ -22,12 +22,12 @@ public enum AnthropicBeta
     DevFullThinking2025_05_14,
     InterleavedThinking2025_05_14,
     CodeExecution2025_05_22,
-    CodeExecution2025_08_25,
     ExtendedCacheTTL2025_04_11,
     Context1m2025_08_07,
     ContextManagement2025_06_27,
     ModelContextWindowExceeded2025_08_26,
-    Skills2025_10_02,
+    Skills2025_10_02,    
+    CodeExecution2025_08_25,
 }
 
 sealed class AnthropicBetaConverter : JsonConverter<AnthropicBeta>
@@ -104,4 +104,5 @@ sealed class AnthropicBetaConverter : JsonConverter<AnthropicBeta>
         );
     }
 }
+
 
