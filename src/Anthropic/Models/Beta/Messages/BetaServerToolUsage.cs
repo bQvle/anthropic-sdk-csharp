@@ -1,4 +1,4 @@
-using System.Collections.Frozen;
+﻿using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
@@ -13,18 +13,18 @@ public sealed record class BetaServerToolUsage : ModelBase
     /// <summary>
     /// The number of web fetch tool requests.
     /// </summary>
-    public required long WebFetchRequests
+    public required long? WebFetchRequests
     {
-        get { return ModelBase.GetNotNullStruct<long>(this.RawData, "web_fetch_requests"); }
+        get { return ModelBase.GetNullableStruct<long>(this.RawData, "web_fetch_requests"); }
         init { ModelBase.Set(this._rawData, "web_fetch_requests", value); }
     }
 
     /// <summary>
     /// The number of web search tool requests.
     /// </summary>
-    public required long WebSearchRequests
+    public required long? WebSearchRequests
     {
-        get { return ModelBase.GetNotNullStruct<long>(this.RawData, "web_search_requests"); }
+        get { return ModelBase.GetNullableStruct<long>(this.RawData, "web_search_requests"); }
         init { ModelBase.Set(this._rawData, "web_search_requests", value); }
     }
 
