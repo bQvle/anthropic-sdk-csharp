@@ -90,6 +90,16 @@ public sealed record class BetaUsage : ModelBase
         init { ModelBase.Set(this._rawData, "service_tier", value); }
     }
 
+    /// <summary>
+    /// The geographic region where inference was performed (e.g., "global").
+    /// This field is optional and may not be present in responses from older models.
+    /// </summary>
+    public required string? InferenceGeo
+    {
+        get { return ModelBase.GetNullableClass<string>(this.RawData, "inference_geo"); }
+        init { ModelBase.Set(this._rawData, "inference_geo", value); }
+    }
+
     /// <inheritdoc/>
     public override void Validate()
     {
@@ -100,6 +110,7 @@ public sealed record class BetaUsage : ModelBase
         _ = this.OutputTokens;
         this.ServerToolUse?.Validate();
         this.ServiceTier?.Validate();
+        _ = this.InferenceGeo;
     }
 
     public BetaUsage() { }
