@@ -109,6 +109,11 @@ public enum Model
     ClaudeOpus4_6,
 
     /// <summary>
+    /// Claude Sonnet 4.6 - Latest Sonnet model
+    /// </summary>
+    ClaudeSonnet4_6,
+
+    /// <summary>
     /// Excels at writing and complex tasks
     /// </summary>
     [System::Obsolete(
@@ -158,6 +163,7 @@ sealed class ModelConverter1 : JsonConverter<Model>
             "claude-4-opus-20250514" => Model.Claude4Opus20250514,
             "claude-opus-4-1-20250805" => Model.ClaudeOpus4_1_20250805,
             "claude-opus-4-6" => Model.ClaudeOpus4_6,
+            "claude-sonnet-4-6" => Model.ClaudeSonnet4_6,
             "claude-3-opus-latest" => Model.Claude3OpusLatest,
             "claude-3-opus-20240229" => Model.Claude_3_Opus_20240229,
             "claude-3-haiku-20240307" => Model.Claude_3_Haiku_20240307,
@@ -189,6 +195,7 @@ sealed class ModelConverter1 : JsonConverter<Model>
                 Model.Claude4Opus20250514 => "claude-4-opus-20250514",
                 Model.ClaudeOpus4_1_20250805 => "claude-opus-4-1-20250805",
                 Model.ClaudeOpus4_6 => "claude-opus-4-6",
+                Model.ClaudeSonnet4_6 => "claude-sonnet-4-6",
                 Model.Claude3OpusLatest => "claude-3-opus-latest",
                 Model.Claude_3_Opus_20240229 => "claude-3-opus-20240229",
                 Model.Claude_3_Haiku_20240307 => "claude-3-haiku-20240307",
